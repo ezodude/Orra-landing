@@ -7,8 +7,6 @@ export async function upsertWaitlistRegistration(supabase, email){
 			}, { onConflict: 'email', defaultToNull: true})
 		.select();
 	
-	console.log('data', data)
-	
 	return {
 		data,
 		error: error ? {
