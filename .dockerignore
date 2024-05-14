@@ -8,5 +8,4 @@ Dockerfile*
 docker-compose.yml
 .dockerignore
 .next
-data
 .env-example
