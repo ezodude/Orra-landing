@@ -15,7 +15,6 @@
     "@headlessui/react": "^1.7.8",
     "@heroicons/react": "^2.0.14",
     "@json2csv/node": "^7.0.1",
-    "@next/font": "^13.1.1",
     "@supabase/auth-helpers-nextjs": "^0.8.1",
     "@supabase/auth-helpers-react": "^0.4.2",
     "@supabase/auth-ui-react": "^0.4.5",
