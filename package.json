@@ -1,0 +1,52 @@
+{
+  "name": "orra-landing",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "NODE_ENV=development next dev",
+    "build": "next build",
+    "start": "next start -H 0.0.0.0 -p ${PORT:-8080}",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.4.0",
+    "@fortawesome/free-solid-svg-icons": "^6.4.0",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "@headlessui/react": "^1.7.8",
+    "@heroicons/react": "^2.0.14",
+    "@json2csv/node": "^7.0.1",
+    "@next/font": "^13.1.1",
+    "@supabase/auth-helpers-nextjs": "^0.8.1",
+    "@supabase/auth-helpers-react": "^0.4.2",
+    "@supabase/auth-ui-react": "^0.4.5",
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@tailwindcss/forms": "^0.5.3",
+    "@tailwindcss/typography": "^0.5.7",
+    "autoprefixer": "^10.4.13",
+    "clsx": "^1.2.1",
+    "date-fns": "^2.30.0",
+    "flowbite": "^2.2.0",
+    "flowbite-react": "^0.7.0",
+    "focus-visible": "^5.2.0",
+    "micro": "^10.0.1",
+    "next": "^13.1.1",
+    "postcss": "^8.4.21",
+    "postcss-focus-visible": "^6.0.4",
+    "posthog-js": "^1.78.4",
+    "react": "18.2.0",
+    "react-aria": "^3.19.0",
+    "react-dom": "18.2.0",
+    "react-share": "^4.4.1",
+    "react-stately": "^3.17.0",
+    "rss-to-json": "^2.1.0",
+    "sharp": "^0.32.3",
+    "tailwindcss": "^3.2.4",
+    "tw-elements": "^1.0.0-beta2"
+  },
+  "devDependencies": {
+    "eslint": "8.31.0",
+    "eslint-config-next": "13.1.1",
+    "prettier": "^2.7.0",
+    "prettier-plugin-tailwindcss": "^0.1.13"
+  }
+}

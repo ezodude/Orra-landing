@@ -1,0 +1,12 @@
+node_modules
+npm-debug.log
+.eslint*
+.git*
+.idea
+README.md
+Dockerfile*
+docker-compose.yml
+.dockerignore
+.next
+data
+.env-example

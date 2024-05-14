@@ -1,0 +1,18 @@
+services:
+  orra-landing:
+    platform: linux/arm64
+    container_name: orra-landing
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: no
+    env_file: .env.local
+    ports:
+      - "3000:3000"
+    networks:
+      - orra-dev
+
+networks:
+  # The presence of these objects is sufficient to define them
+  orra-dev: {}
+
