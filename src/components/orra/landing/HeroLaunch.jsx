@@ -34,16 +34,16 @@ export function HeroLaunch() {
 		}
 		
 		const response = await fetch(endpoint, options)
-
+		
 		const result = await response.json()
-
+		
 		if (response.status === 500) {
 			if (result.code === "UpsertOrraWaitlistRegistrationFail") {
 				return setErrorMessage("Apologies we could not sign you up to the waitlist at this time, please try again later.");
 			}
 			return setErrorMessage(result.error.message);
 		}
-
+		
 		return setSuccessMessage("Thanks for signing up to our waitlist! We'll get in touch very soon.")
 	}
 	
@@ -56,17 +56,15 @@ export function HeroLaunch() {
 							<div className="max-w-4xl">
 								<h1
 									className="mx-auto max-w-4xl text-3xl font-medium tracking-tight text-gray-900 sm:text-5xl">
-									Make your AI Agents Work
+									Multi-Agent Apps that Work
 								</h1>
 							</div>
 							
 							<div className="mt-6 mx-auto max-w-3xl md:text-center mb-2">
 								<p
 									className="mx-auto max-w-2xl sm:text-xl text-lg font-medium leading-8 text-gray-800">
-									Build reliable and simple to customise AI Multi-Agent workflows using any Agent - batteries included.
-								</p>
-								<p className="mt-8 text-sm tracking-tight text-gray-800 sm:text-md">
-									A code first agentic solution for developers - coming soon.
+									Dev-friendly platform providing a set of building blocks and convention to help you ship robust and
+									reliable multi-agent apps.
 								</p>
 							</div>
 							<Error errorMessage={errorMessage}/>
