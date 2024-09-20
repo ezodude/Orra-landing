@@ -50,7 +50,21 @@ export function HeroLaunch() {
 	return (
 		<div>
 			<div className="text-center relative overflow-hidden bg-rose-50">
-				<div className="mx-auto max-w-7xl pb-24 pt-16 sm:pb-32 lg:px-8 lg:py-24">
+				<div className="mx-auto max-w-2xl sm:py-2 lg:py-2">
+					<div className="hidden sm:mb-2 sm:flex sm:justify-center">
+						<div
+							className="relative bg-black rounded-full px-8 py-1.5 text-sm leading-6 text-gray-400 ring-1 ring-gray-700/10 hover:ring-gray-700/20">
+							Want early access?{' '}
+							<a
+								href="https://outgoing-icecream-a85.notion.site/Orra-Design-partner-opportunity-24152e259586469bb91652fabd84aaac"
+								className="font-medium text-white hover:text-gray-500">
+								<span aria-hidden="true" className="absolute inset-0"/>
+								Become a design partner <span aria-hidden="true">&rarr;</span>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div className="mx-auto max-w-7xl pb-24 pt-10 sm:pb-32 lg:px-8">
 					<div className="px-6 lg:px-0">
 						<div className="mx-auto max-w-2xl">
 							<div className="max-w-4xl">
