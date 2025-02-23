@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
-import Error from '@/components/alerts/error'
-import Info from '@/components/alerts/info'
+import Error from "@/components/alerts/error";
+import Info from "@/components/alerts/info";
 
 export function HeroLaunch() {
 	const [ showWaitlistForm, setShowWaitlistForm ] = useState(false);
@@ -14,8 +14,6 @@ export function HeroLaunch() {
 		const data = {
 			email: event.target.email.value.trim()
 		}
-		
-		console.log('data', data)
 		
 		// Send the data to the server in JSON format.
 		const JSONData = JSON.stringify(data)
@@ -36,17 +34,10 @@ export function HeroLaunch() {
 		}
 		
 		const response = await fetch(endpoint, options)
-		
-		const result = await response.json()
-		
 		if (response.status === 500) {
-			if (result.code === "UpsertOrraWaitlistRegistrationFail") {
-				return setErrorMessage("Apologies we could not sign you up to the waitlist at this time, please try again later.");
-			}
-			return setErrorMessage(result.error.message);
+			return setErrorMessage("Apologies we could not sign you up to the waitlist at this time, please try again later.");
 		}
-		
-		return setSuccessMessage("Thanks for signing up to our waitlist! We'll get in touch very soon.")
+		return setSuccessMessage("Thanks for signing up! We'll get in touch very soon.")
 	}
 	
 	return (
@@ -117,42 +108,43 @@ export function HeroLaunch() {
 										</svg>
 									</button>
 									{showWaitlistForm && !successMessage && (
-										<>
-											<form
-												onSubmit={handleSubmit}
-												className="mx-auto mt-4 flex max-w-md gap-x-4 justify-center"
+										<form
+											onSubmit={handleSubmit}
+											className="mx-auto mt-4 flex max-w-md gap-x-4 justify-center"
+										>
+											<label htmlFor="email" className="sr-only">
+												Email address
+											</label>
+											<input
+												id="email"
+												name="email"
+												type="email"
+												autoComplete="email"
+												required
+												className="min-w-0 flex-auto rounded-md border-0 bg-white px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-200 focus:ring-2 focus:ring-inset focus:ring-black sm:text-sm sm:leading-6"
+												placeholder="Enter your email"
+											/>
+											<button
+												type="submit"
+												className="flex-none rounded-md bg-black px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-gray-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
 											>
-												<label htmlFor="email" className="sr-only">
-													Email address
-												</label>
-												<input
-													id="email"
-													name="email"
-													type="email"
-													autoComplete="email"
-													required
-													className="min-w-0 flex-auto rounded-md border-0 bg-white/5 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-200 focus:ring-2 focus:ring-inset focus:ring-black sm:text-sm sm:leading-6"
-													placeholder="Enter your email"
-												/>
-												<button
-													type="submit"
-													className="flex-none rounded-md bg-black px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-gray-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
-												>
-													Join waitlist
-												</button>
-											</form>
-											<div className="mt-3 max-w-md mx-auto">
-												<Error errorMessage={errorMessage}/>
-												<Info
-													info={successMessage}
-													callback={() => {
-														setSuccessMessage("");
-														setShowWaitlistForm(false); // Optional: hide form on success
-													}}
-												/>
-											</div>
-										</>
+												Join waitlist
+											</button>
+										</form>
 									)}
+									{showWaitlistForm && (successMessage || errorMessage) && (
+										<div className="mt-3 max-w-md mx-auto">
+											<Error errorMessage={errorMessage}/>
+											<Info
+												info={successMessage}
+												callback={() => {
+													setSuccessMessage("");
+													setShowWaitlistForm(false); // Optional: hide form on success
+												}}
+											/>
+										</div>
+									)}
+								
 								</div>
 								<p className="mt-3 w-full text-sm">Need help with a <abbr title="Proof of concept">PoC</abbr>?&nbsp;
 									<Link
