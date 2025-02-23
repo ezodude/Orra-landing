@@ -1,3 +1,4 @@
+import '@/styles/global.css'
 import '@/styles/tailwind.css'
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import 'focus-visible'
