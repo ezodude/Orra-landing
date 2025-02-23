@@ -2,7 +2,6 @@ import Head from 'next/head'
 import { Footer } from '@/components/orra/landing/Footer'
 import { Header } from '@/components/orra/landing/Header'
 import { HeroLaunch } from '@/components/orra/landing/HeroLaunch'
-import { OriginStory } from '@/components/orra/landing/OriginStory'
 
 export default function Home() {
 	return (
@@ -18,13 +17,13 @@ export default function Home() {
 					content="Use Orra to build reliable and simple to customise AI Multi-Agent workflows."
 				/>
 			</Head>
-			
-			<main className="bg-slate-50 h-screen">
-				<Header/>
-				<HeroLaunch/>
-				<OriginStory/>
-				<Footer/>
-			</main>
+			<div className="flex flex-col min-h-screen">
+				<main className="bg-gray-900 flex-grow">
+					<Header/>
+					<HeroLaunch/>
+					<Footer/>
+				</main>
+			</div>
 		</>
 	)
 }
