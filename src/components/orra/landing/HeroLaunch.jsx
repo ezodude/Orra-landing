@@ -50,35 +50,19 @@ export function HeroLaunch() {
 	return (
 		<div>
 			<div className="text-center relative overflow-hidden bg-rose-50">
-				<div className="mx-auto max-w-2xl sm:py-2 lg:py-2">
-					<div className="hidden sm:mb-2 sm:flex sm:justify-center">
-						<div
-							className="relative bg-black rounded-full px-8 py-1.5 text-sm leading-6 text-gray-400 ring-1 ring-gray-700/10 hover:ring-gray-700/20">
-							Want early access?{' '}
-							<a
-								href="https://outgoing-icecream-a85.notion.site/Orra-Design-partner-opportunity-24152e259586469bb91652fabd84aaac"
-								className="font-medium text-white hover:text-gray-500">
-								<span aria-hidden="true" className="absolute inset-0"/>
-								Become a design partner <span aria-hidden="true">&rarr;</span>
-							</a>
-						</div>
-					</div>
-				</div>
 				<div className="mx-auto max-w-7xl pb-24 pt-10 sm:pb-32 lg:px-8">
 					<div className="px-6 lg:px-0">
-						<div className="mx-auto max-w-2xl">
+						<div className="mx-auto max-w-4xl">
 							<div className="max-w-4xl">
-								<h1
-									className="mx-auto max-w-4xl text-3xl font-medium tracking-tight text-gray-900 sm:text-5xl">
-									Multi-Agent Apps that Work
+								<h1 className="text-3xl md:text-5xl font-bold mb-4 leading-tight tracking-tighter max-w-4xl">
+									Production-Ready<br/>
+									Multi-Agent Applications
 								</h1>
 							</div>
-							
-							<div className="mt-6 mx-auto max-w-3xl md:text-center mb-2">
-								<p
-									className="mx-auto max-w-2xl sm:text-xl text-lg font-medium leading-8 text-gray-800">
-									Dev-friendly platform providing a set of building blocks and convention to help you ship robust and
-									reliable multi-agent apps.
+							<div className="mt-6 mx-auto max-w-4xl md:text-center mb-2">
+								<p className="mx-auto max-w-3xl sm:text-xl text-lg font-medium tracking-tighter leading-8 text-gray-800">
+									Move beyond simple agents.<br/>
+									Build reliable, intelligent systems that handle real-world complexity.
 								</p>
 							</div>
 							<Error errorMessage={errorMessage}/>
