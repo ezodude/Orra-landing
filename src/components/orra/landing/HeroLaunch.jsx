@@ -47,6 +47,11 @@ export function HeroLaunch() {
 					<div className="px-6 lg:px-0">
 						<div className="mx-auto max-w-4xl">
 							<div className="max-w-4xl">
+								<Link href="https://outgoing-icecream-a85.notion.site/The-Missing-Glue-Layer-for-Multi-Agent-Applications-1a0605f92f9c80ca83acef5402a334dd" target="_blank">
+                  <span className="inline-flex items-center rounded-md bg-purple-50 px-2 py-1 text-xs font-medium text-purple-700 ring-1 ring-inset ring-purple-700/10 mb-4 hover:bg-purple-100 transition-colors duration-200">
+                    Read our launch blog post →
+                  </span>
+								</Link>
 								<h1 className="text-3xl md:text-5xl font-bold mb-4 leading-tight tracking-tighter max-w-4xl">
 									Production-Ready<br/>
 									Multi-Agent Applications
