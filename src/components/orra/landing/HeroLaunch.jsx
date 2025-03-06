@@ -150,8 +150,9 @@ export function HeroLaunch() {
 										</div>
 									)}
 								</div>
-								<section className="mt-12 py-8 border-t border-gray-200">
+								<section className="mt-12 py-8">
 									<div className="container mx-auto px-4 text-center">
+										<div className="h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full mb-8"></div>
 										<h3 className="text-xl font-medium text-gray-800">
 											Curious about Orra? Let us show you how it works.
 										</h3>
