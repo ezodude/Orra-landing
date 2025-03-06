@@ -149,13 +149,23 @@ export function HeroLaunch() {
 											/>
 										</div>
 									)}
-								
 								</div>
-								<p className="mt-3 w-full text-sm">Need help with a <abbr title="Proof of concept">PoC</abbr>?&nbsp;
-									<Link
-										className="text-body underline decoration-neutral-6 underline-offset-2 transition-colors hover:text-contrast hover:decoration-neutral-12"
-										target="_blank" href="https://cal.com/orra-dev/30min">Talk to us</Link>
-								</p>
+								<section className="mt-12 py-8 border-t border-gray-200">
+									<div className="container mx-auto px-4 text-center">
+										<h3 className="text-xl font-medium text-gray-800">
+											Curious about Orra? Let us show you how it works.
+										</h3>
+										<p className="text-sm text-gray-600 mt-2">
+											Book a quick 30-minute demo to explore how Orra can help you move beyond simple agents.
+										</p>
+										<a
+											href="https://cal.com/orra-dev/30min"
+											className="mt-4 inline-block bg-black text-white text-sm font-semibold py-2 px-5 rounded-md hover:bg-gray-800 transition duration-300 ease-in-out"
+										>
+											Book Your Demo
+										</a>
+									</div>
+								</section>
 							</div>
 						</div>
 					</div>
