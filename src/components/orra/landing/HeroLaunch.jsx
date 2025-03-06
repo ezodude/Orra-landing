@@ -47,9 +47,9 @@ export function HeroLaunch() {
 					<div className="px-6 lg:px-0">
 						<div className="mx-auto max-w-4xl">
 							<div className="max-w-4xl">
-								<Link href="https://outgoing-icecream-a85.notion.site/The-Missing-Glue-Layer-for-Multi-Agent-Applications-1a0605f92f9c80ca83acef5402a334dd" target="_blank">
+								<Link href="https://tinyurl.com/orra-launch-blog-post" target="_blank">
                   <span className="inline-flex items-center rounded-md bg-purple-50 px-2 py-1 text-xs font-medium text-purple-700 ring-1 ring-inset ring-purple-700/10 mb-4 hover:bg-purple-100 transition-colors duration-200">
-                    Read our launch blog post →
+                    Learn why we built orra →
                   </span>
 								</Link>
 								<h1 className="text-3xl md:text-5xl font-bold mb-4 leading-tight tracking-tighter max-w-4xl">
@@ -150,8 +150,9 @@ export function HeroLaunch() {
 										</div>
 									)}
 								</div>
-								<section className="mt-12 py-8 border-t border-gray-200">
+								<section className="mt-12 py-8">
 									<div className="container mx-auto px-4 text-center">
+										<div className="h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full mb-8"></div>
 										<h3 className="text-xl font-medium text-gray-800">
 											Curious about Orra? Let us show you how it works.
 										</h3>
