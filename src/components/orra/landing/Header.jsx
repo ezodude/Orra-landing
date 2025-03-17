@@ -37,6 +37,14 @@ export function Header() {
 							<span className="sr-only">GitHub</span>
 						</Link>
 					</div>
+					<div className="flex items-center">
+						<Link
+							href="https://blog.orra.dev"
+							className="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-gray-700 border border-gray-300 rounded-md hover:text-[rgb(var(--magenta))] hover:border-[rgb(var(--magenta))] transition-colors"
+						>
+							Read our engineering blog
+						</Link>
+					</div>
 				</nav>
 			</Container>
 		</header>
