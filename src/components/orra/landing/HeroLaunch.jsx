@@ -70,7 +70,7 @@ export function HeroLaunch() {
 										type="button"
 										className="inline-flex items-center gap-x-2 rounded-md bg-black px-12 py-4 text-sm font-semibold text-white shadow-sm hover:bg-gray-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bg-white/10"
 									>
-										TRY ORRA ALPHA NOW
+										TRY ORRA NOW
 										<svg
 											xmlns="http://www.w3.org/2000/svg"
 											width="24"
