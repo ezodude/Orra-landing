@@ -48,7 +48,8 @@ export function HeroLaunch() {
 						<div className="mx-auto max-w-4xl">
 							<div className="max-w-4xl">
 								<Link href="https://tinyurl.com/orra-launch-blog-post" target="_blank">
-                  <span className="inline-flex items-center rounded-md bg-purple-50 px-2 py-1 text-xs font-medium text-purple-700 ring-1 ring-inset ring-purple-700/10 mb-4 hover:bg-purple-100 transition-colors duration-200">
+                  <span
+	                  className="inline-flex items-center rounded-md bg-purple-50 px-2 py-1 text-xs font-medium text-purple-700 ring-1 ring-inset ring-purple-700/10 mb-4 hover:bg-purple-100 transition-colors duration-200">
                     Learn why we built orra →
                   </span>
 								</Link>
@@ -70,7 +71,7 @@ export function HeroLaunch() {
 										type="button"
 										className="inline-flex items-center gap-x-2 rounded-md bg-black px-12 py-4 text-sm font-semibold text-white shadow-sm hover:bg-gray-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bg-white/10"
 									>
-										TRY ORRA ALPHA NOW
+										TRY ORRA NOW
 										<svg
 											xmlns="http://www.w3.org/2000/svg"
 											width="24"
@@ -150,21 +151,97 @@ export function HeroLaunch() {
 										</div>
 									)}
 								</div>
-								<section className="mt-12 py-8">
+								<section className="py-8 px-8">
 									<div className="container mx-auto px-4 text-center">
 										<div className="h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full mb-8"></div>
-										<h3 className="text-xl font-medium text-gray-800">
-											Curious about Orra? Let us show you how it works.
-										</h3>
-										<p className="text-sm text-gray-600 mt-2">
-											Book a quick 30-minute demo to explore how Orra can help you move beyond simple agents.
-										</p>
-										<a
-											href="https://cal.com/orra-dev/30min"
-											className="mt-4 inline-block bg-black text-white text-sm font-semibold py-2 px-5 rounded-md hover:bg-gray-800 transition duration-300 ease-in-out"
-										>
-											Book Your Demo
-										</a>
+									</div>
+									
+									{/* Section Header */}
+									<div className="text-center mb-8">
+										<h2 className="text-3xl font-extrabold mb-2 tracking-tighter text-gray-900">Get Started</h2>
+										<p className="text-lg tracking-tight text-gray-700">Come and talk to us about your use case</p>
+									</div>
+									
+									{/* Content Card */}
+									<div className="max-w-xl mx-auto border border-gray-600 rounded-lg shadow-md p-8">
+										{/* Card Header */}
+										<div className="text-center mb-6">
+											<h3 className="text-2xl font-bold text-gray-800 mb-2">Custom Agent Infrastructure 🌐</h3>
+											<p className="text-gray-600">
+												Work with the Orra team to design, implement, and deploy production-grade multi-agent systems tailored
+												to your specific requirements.
+											</p>
+										</div>
+										
+										{/* Pricing */}
+										<p className="text-xl font-bold text-gray-900 mb-6">$1,000+ / month</p>
+										
+										{/* Features List */}
+										<ul className="space-y-4 text-gray-700 mb-6">
+											<li className="flex items-start">
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													width="24"
+													height="24"
+													viewBox="0 0 24 24"
+													fill="none"
+													stroke="currentColor"
+													strokeWidth="2"
+													strokeLinecap="round"
+													strokeLinejoin="round"
+													className="lucide lucide-check mr-2 h-5 w-5 text-purple-500 flex-shrink-0"
+												>
+													<path d="M20 6 9 17l-5-5"></path>
+												</svg>
+												Reliable architecture for scalability.
+											</li>
+											<li className="flex items-start">
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													width="24"
+													height="24"
+													viewBox="0 0 24 24"
+													fill="none"
+													stroke="currentColor"
+													strokeWidth="2"
+													strokeLinecap="round"
+													strokeLinejoin="round"
+													className="lucide lucide-check mr-2 h-5 w-5 text-purple-500 flex-shrink-0"
+												>
+													<path d="M20 6 9 17l-5-5"></path>
+												</svg>
+												Custom deployment options.
+											</li>
+											<li className="flex items-start">
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													width="24"
+													height="24"
+													viewBox="0 0 24 24"
+													fill="none"
+													stroke="currentColor"
+													strokeWidth="2"
+													strokeLinecap="round"
+													strokeLinejoin="round"
+													className="lucide lucide-check mr-2 h-5 w-5 text-purple-500 flex-shrink-0"
+												>
+													<path d="M20 6 9 17l-5-5"></path>
+												</svg>
+												Priority roadmap acceleration.
+											</li>
+										</ul>
+										
+										{/* Call-to-action Button */}
+										<div className="text-center">
+											<Link
+												href="https://cal.com/orra-dev/agent-apps-to-prod"
+												className="bg-black
+            text-white py-3 px-6 rounded-lg inline-block transition-all duration-300 shadow-md
+            transform hover:scale-[1.05]"
+											>
+												Talk to us →
+											</Link>
+										</div>
 									</div>
 								</section>
 							</div>
