@@ -154,13 +154,13 @@ export function HeroLaunch() {
 									<div className="container mx-auto px-4 text-center">
 										<div className="h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full mb-8"></div>
 										<h3 className="text-xl font-medium text-gray-800">
-											Curious about Orra? Let us show you how it works.
+											Curious about orra? Let us show you how it works.
 										</h3>
 										<p className="text-sm text-gray-600 mt-2">
-											Book a quick 30-minute demo to explore how Orra can help you move beyond simple agents.
+											Book a quick 30-minute demo to explore how orra can help you move beyond simple agents.
 										</p>
 										<a
-											href="https://cal.com/orra-dev/30min"
+											href="https://cal.com/orra-dev/agent-apps-to-prod"
 											className="mt-4 inline-block bg-black text-white text-sm font-semibold py-2 px-5 rounded-md hover:bg-gray-800 transition duration-300 ease-in-out"
 										>
 											Book Your Demo
