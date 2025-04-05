@@ -168,7 +168,7 @@ export function HeroLaunch() {
 										<div className="text-center mb-6">
 											<h3 className="text-2xl font-bold text-gray-800 mb-2">Custom Agent Infrastructure 🌐</h3>
 											<p className="text-gray-600">
-												Collaborate with the Orra team to design, implement, and deploy production-grade multi-agent systems tailored
+												Work with the Orra team to design, implement, and deploy production-grade multi-agent systems tailored
 												to your specific requirements.
 											</p>
 										</div>
