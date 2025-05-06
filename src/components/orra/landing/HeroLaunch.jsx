@@ -54,15 +54,25 @@ export function HeroLaunch() {
                   </span>
 								</Link>
 								<h1 className="text-3xl md:text-5xl font-bold mb-4 leading-tight tracking-tighter max-w-4xl">
-									Production-Ready<br/>
-									Multi-Agent Applications
+									Make Your<br/>
+									AI Agents Unstoppable
 								</h1>
 							</div>
 							<div className="mt-6 mx-auto max-w-4xl md:text-center mb-2">
 								<p
 									className="mx-auto max-w-3xl sm:text-xl text-lg font-medium tracking-tighter leading-8 text-gray-800">
-									Move beyond simple agents.<br/>
-									Build reliable, intelligent systems that handle real-world complexity.
+									When your agent workflows face the unexpected<br/>
+									orra keeps you moving forward.
+								</p>
+							</div>
+							<div className="mt-6 mx-auto max-w-4xl md:text-center mb-2">
+								<p
+									className="mx-auto max-w-3xl sm:text-xl text-lg font-medium tracking-tighter leading-8 text-gray-800">
+									AI agents don’t follow scripts. APIs fail, evals fail, and outcomes are unpredictable. Most orchestration tools expect you to plan for every possibility. orra is different.
+								</p>
+								<p
+									className="mx-auto max-w-3xl sm:text-xl text-lg font-medium tracking-tighter leading-8 text-gray-800 mt-4">
+									Orra is built for non-deterministic, multi-agent workflows where failure is the norm, not the exception. When things go wrong, Orra recovers, adapts, and keeps your system progressing. No lost work. No brittle error handling. No dead ends.
 								</p>
 							</div>
 							<div className="mt-6 mx-auto max-w-4xl md:text-center mb-2">
