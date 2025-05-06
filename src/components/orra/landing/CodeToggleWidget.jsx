@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { atomDark } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 
-
 const CodeToggleWidget = () => {
 	const [activeTab, setActiveTab] = useState('python');
 	
@@ -45,7 +44,11 @@ await agent.register({
 agent.start(async (task) => {
   const results = await runResearch(task.input.topic, task.input.depth);
   return { summary: results.summary };
-});`;
+});
+
+
+
+`;
 	
 	return (
 		<div className="bg-white rounded-lg shadow-lg overflow-hidden max-w-2xl mx-auto">
@@ -71,38 +74,41 @@ agent.start(async (task) => {
 					JavaScript
 				</button>
 			</div>
-			<div className="transition-all duration-300 ease-in-out">
-				{activeTab === 'python' ? (
+			
+			{/* Simple tab approach with display toggle instead of absolute positioning */}
+			<div className="h-[500px] overflow-auto">
+				<div className={`${activeTab === 'python' ? 'block' : 'hidden'}`}>
 					<SyntaxHighlighter
 						language="python"
 						style={atomDark}
 						customStyle={{
 							margin: 0,
 							padding: '16px',
-							borderRadius: '0',
 							backgroundColor: '#1e1e1e',
 							fontSize: '14px',
 							lineHeight: '1.5',
+							height: '100%'
 						}}
 					>
 						{pythonCode}
 					</SyntaxHighlighter>
-				) : (
+				</div>
+				<div className={`${activeTab === 'javascript' ? 'block' : 'hidden'}`}>
 					<SyntaxHighlighter
 						language="javascript"
 						style={atomDark}
 						customStyle={{
 							margin: 0,
 							padding: '16px',
-							borderRadius: '0',
 							backgroundColor: '#1e1e1e',
 							fontSize: '14px',
 							lineHeight: '1.5',
+							height: '100%'
 						}}
 					>
 						{javascriptCode}
 					</SyntaxHighlighter>
-				)}
+				</div>
 			</div>
 		</div>
 	);
