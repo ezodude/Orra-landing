@@ -65,7 +65,7 @@ export function HeroLaunch() {
 								recovers, adapts, and keeps your system progressing. No lost work. No brittle error handling. No dead
 								ends.
 							</p>
-							<div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+							<div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center sm:items-start">
 								<Link href="https://github.com/orra-dev/orra">
 									<button
 										type="button"
@@ -93,7 +93,7 @@ export function HeroLaunch() {
 								<button
 									type="button"
 									onClick={() => setShowWaitlistForm(!showWaitlistForm)}
-									className="inline-flex items-center gap-x-2 rounded-md bg-white px-8 py-3 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-200 hover:bg-gray-50"
+									className="inline-flex items-center gap-x-2 rounded-md bg-white px-12 py-4 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-200 hover:bg-gray-50"
 								>
 									Join Cloud Waitlist
 									<svg
