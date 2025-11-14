@@ -58,12 +58,10 @@ export function HeroLaunch() {
 								Build Production-Ready AI Agents That Actually Work
 							</h1>
 							<p className="text-lg text-gray-800 mb-6">
-								Orra keeps your agent workflows moving forward-even when APIs or evaluations fail.
+								We help businesses design, build, and deploy resilient agentic applications—from architecture to production.
 							</p>
 							<p className="text-base text-gray-700 mb-8">
-								Built for non-deterministic, multi-agent workflows where failure is the norm, not the exception. Orra
-								recovers, adapts, and keeps your system progressing. No lost work. No brittle error handling. No dead
-								ends.
+								Most AI agent projects fail to reach production. We've built infrastructure for resilient agent workflows—and we'll work with your team to architect, implement, and deploy systems that handle real-world complexity. From initial design to ongoing optimization, we ensure your agents work reliably at scale.
 							</p>
 							<div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center sm:items-start">
 								<Link href="https://github.com/orra-dev/orra">
