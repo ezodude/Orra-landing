@@ -140,21 +140,24 @@ export function HeroLaunch() {
 					</div>
 				</section>
 
-				{/* Get Started Section - below the fold */}
-				{/*<section className="bg-white rounded-2xl shadow-lg p-10 mt-10 max-w-3xl mx-auto">*/}
-				<section className="py-8 px-8">
-					<div className="container mx-auto px-4 text-center">
-						<div className="h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full mb-8"></div>
-					</div>
-					
-					{/* Section Header */}
-					<div className="text-center mb-8">
-						<h2 className="text-3xl font-extrabold mb-2 tracking-tighter text-gray-900">Get Started</h2>
-						<p className="text-lg tracking-tight text-gray-700">Come and talk to us about your use case</p>
-					</div>
-					
-					{/* Content Card */}
-					<div className="max-w-xl mx-auto border border-gray-600 rounded-lg shadow-md p-8">
+				{/* Services Section */}
+				<section className="py-16 px-8 bg-rose-50">
+					<div className="max-w-7xl mx-auto">
+						<div className="container mx-auto px-4 text-center mb-4">
+							<div className="h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full mb-8"></div>
+						</div>
+
+						{/* Section Header */}
+						<div className="text-center mb-12">
+							<h2 className="text-3xl font-extrabold mb-2 tracking-tighter text-gray-900">Our Services</h2>
+							<p className="text-lg tracking-tight text-gray-700">Flexible engagement models to meet your needs</p>
+						</div>
+
+						{/* Service Cards Grid */}
+						<div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+					{/* Tier 2 Card - Implementation Partnership (existing card, will be updated in commit 10) */}
+					<div className="border border-gray-600 rounded-lg shadow-md p-8 bg-white">
 						{/* Card Header */}
 						<div className="text-center mb-6">
 							<h3 className="text-2xl font-bold text-gray-800 mb-2">Custom Agent Infrastructure 🌐</h3>
@@ -233,9 +236,10 @@ export function HeroLaunch() {
 								Talk to us →
 							</Link>
 						</div>
+
+						</div>{/* End Service Cards Grid */}
 					</div>
 				</section>
-				{/*</section>*/}
 			</div>
 		</div>
 	)
