@@ -233,17 +233,14 @@ export function HeroLaunch() {
 
 					{/* Tier 2 Card - Implementation Partnership (existing card, will be updated in commit 10) */}
 					<div className="border border-gray-600 rounded-lg shadow-md p-8 bg-white">
-						{/* Card Header */}
 						<div className="text-center mb-6">
-							<h3 className="text-2xl font-bold text-gray-800 mb-2">Custom Agent Infrastructure 🌐</h3>
+							<h3 className="text-2xl font-bold text-gray-800 mb-2">Implementation Partnership</h3>
 							<p className="text-gray-600">
-								Work with the Orra team to design, implement, and deploy production-grade multi-agent systems tailored
-								to your specific requirements.
+								Partner with us to build, deploy, and scale production-grade multi-agent systems tailored to your business needs.
 							</p>
 						</div>
 						
-						{/* Pricing */}
-						<p className="text-xl font-bold text-gray-900 mb-6">$1,000+ / month</p>
+						<p className="text-lg font-semibold text-gray-700 mb-6 text-center">Contact us for pricing</p>
 						
 						{/* Features List */}
 						<ul className="space-y-4 text-gray-700 mb-6">
@@ -262,7 +259,7 @@ export function HeroLaunch() {
 								>
 									<path d="M20 6 9 17l-5-5"></path>
 								</svg>
-								Reliable architecture for scalability.
+								Custom architecture design for your use case
 							</li>
 							<li className="flex items-start">
 								<svg
@@ -279,7 +276,7 @@ export function HeroLaunch() {
 								>
 									<path d="M20 6 9 17l-5-5"></path>
 								</svg>
-								Custom deployment options.
+								Full implementation and production deployment
 							</li>
 							<li className="flex items-start">
 								<svg
@@ -296,19 +293,16 @@ export function HeroLaunch() {
 								>
 									<path d="M20 6 9 17l-5-5"></path>
 								</svg>
-								Priority roadmap acceleration.
+								Ongoing optimization and support
 							</li>
 						</ul>
 						
-						{/* Call-to-action Button */}
 						<div className="text-center">
 							<Link
 								href="https://cal.com/orra-dev/agent-apps-to-prod"
-								className="bg-black
-            text-white py-3 px-6 rounded-lg inline-block transition-all duration-300 shadow-md
-            transform hover:scale-[1.05]"
+								className="bg-black text-white py-3 px-6 rounded-lg inline-block transition-all duration-300 shadow-md transform hover:scale-[1.05]"
 							>
-								Talk to us →
+								Schedule Your Consultation
 							</Link>
 						</div>
 
