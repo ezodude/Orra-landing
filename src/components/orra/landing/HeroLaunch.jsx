@@ -306,6 +306,81 @@ export function HeroLaunch() {
 							</Link>
 						</div>
 
+							{/* Tier 3 Card - Managed Infrastructure */}
+							<div className="border border-gray-300 rounded-lg shadow-md p-8 bg-white">
+								<div className="text-center mb-6">
+									<h3 className="text-2xl font-bold text-gray-800 mb-2">Managed Infrastructure</h3>
+									<p className="text-gray-600">
+										Fully managed Orra-powered infrastructure with 24/7 support for mission-critical AI agent systems.
+									</p>
+								</div>
+
+								<p className="text-lg font-semibold text-gray-700 mb-6 text-center">Contact us for pricing</p>
+
+								<ul className="space-y-4 text-gray-700 mb-6">
+									<li className="flex items-start">
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											width="24"
+											height="24"
+											viewBox="0 0 24 24"
+											fill="none"
+											stroke="currentColor"
+											strokeWidth="2"
+											strokeLinecap="round"
+											strokeLinejoin="round"
+											className="lucide lucide-check mr-2 h-5 w-5 text-purple-500 flex-shrink-0"
+										>
+											<path d="M20 6 9 17l-5-5"></path>
+										</svg>
+										Dedicated Orra cloud hosting
+									</li>
+									<li className="flex items-start">
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											width="24"
+											height="24"
+											viewBox="0 0 24 24"
+											fill="none"
+											stroke="currentColor"
+											strokeWidth="2"
+											strokeLinecap="round"
+											strokeLinejoin="round"
+											className="lucide lucide-check mr-2 h-5 w-5 text-purple-500 flex-shrink-0"
+										>
+											<path d="M20 6 9 17l-5-5"></path>
+										</svg>
+										24/7 monitoring and support
+									</li>
+									<li className="flex items-start">
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											width="24"
+											height="24"
+											viewBox="0 0 24 24"
+											fill="none"
+											stroke="currentColor"
+											strokeWidth="2"
+											strokeLinecap="round"
+											strokeLinejoin="round"
+											className="lucide lucide-check mr-2 h-5 w-5 text-purple-500 flex-shrink-0"
+										>
+											<path d="M20 6 9 17l-5-5"></path>
+										</svg>
+										SLA guarantees and priority support
+									</li>
+								</ul>
+
+								<div className="text-center">
+									<Link
+										href="https://cal.com/orra-dev/agent-apps-to-prod"
+										className="bg-black text-white py-3 px-6 rounded-lg inline-block transition-all duration-300 shadow-md transform hover:scale-[1.05]"
+									>
+										Schedule Your Consultation
+									</Link>
+								</div>
+							</div>
+
 						</div>{/* End Service Cards Grid */}
 					</div>
 				</section>
