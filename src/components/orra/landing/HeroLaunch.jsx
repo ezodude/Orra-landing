@@ -1,45 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import Link from "next/link";
-import Error from "@/components/alerts/error";
-import Info from "@/components/alerts/info";
 import HeroDiagram from "@/components/orra/landing/HeroDiagram";
 
 export function HeroLaunch() {
-	const [ showWaitlistForm, setShowWaitlistForm ] = useState(false);
-	const [ successMessage, setSuccessMessage ] = useState('');
-	const [ errorMessage, setErrorMessage ] = useState('');
-	
-	const handleSubmit = async (event) => {
-		event.preventDefault()
-		
-		const data = {
-			email: event.target.email.value.trim()
-		}
-		
-		// Send the data to the server in JSON format.
-		const JSONData = JSON.stringify(data)
-		
-		// API endpoint where we send form data.
-		const endpoint = '/api/orra/waitlist/registration'
-		
-		// Form the request for sending data to the server.
-		const options = {
-			// The method is POST because we are sending data.
-			method: 'POST',
-			// Tell the server we're sending JSON.
-			headers: {
-				'Content-Type': 'application/json',
-			},
-			// Body of the request is the JSON data we created above.
-			body: JSONData,
-		}
-		
-		const response = await fetch(endpoint, options)
-		if (response.status === 500) {
-			return setErrorMessage("Apologies we could not sign you up to the waitlist at this time, please try again later.");
-		}
-		return setSuccessMessage("Thanks for signing up! We'll get in touch very soon.")
-	}
 	
 	return (
 		<div>
@@ -97,33 +60,6 @@ export function HeroLaunch() {
 									</button>
 								</Link>
 							</div>
-							{showWaitlistForm && (
-								<form onSubmit={handleSubmit} className="mt-4 flex gap-x-2 max-w-md mx-auto lg:mx-0">
-									<input
-										id="email"
-										name="email"
-										type="email"
-										required
-										className="flex-auto rounded-md border-0 bg-white px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-gray-200 focus:ring-2 focus:ring-black"
-										placeholder="Enter your email"
-									/>
-									<button
-										type="submit"
-										className="rounded-md bg-black px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-gray-800"
-									>
-										Join waitlist
-									</button>
-								</form>
-							)}
-							{showWaitlistForm && (successMessage || errorMessage) && (
-								<div className="mt-3 max-w-md mx-auto lg:mx-0">
-									<Error errorMessage={errorMessage}/>
-									<Info info={successMessage} callback={() => {
-										setSuccessMessage("");
-										setShowWaitlistForm(false);
-									}}/>
-								</div>
-							)}
 							{/* Optional: Social proof row here */}
 						</div>
 						
