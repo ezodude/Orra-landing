@@ -44,7 +44,7 @@ export function Header() {
 							href="https://cal.com/orra-dev/agent-apps-to-prod"
 							className="mt-4 sm:mt-0 inline-block bg-black text-white text-sm font-semibold py-2 px-5 rounded-md hover:bg-gray-800 transition duration-300 ease-in-out text-center"
 						>
-							Book Your Demo
+							Schedule a Consultation
 						</Link>
 						<Link
 							href="https://blog.orra.dev"
