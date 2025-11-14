@@ -55,7 +55,7 @@ export function HeroLaunch() {
                 </span>
 							</Link>
 							<h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight tracking-tighter">
-								Make Your AI Agents Unstoppable
+								Build Production-Ready AI Agents That Actually Work
 							</h1>
 							<p className="text-lg text-gray-800 mb-6">
 								Orra keeps your agent workflows moving forward-even when APIs or evaluations fail.
