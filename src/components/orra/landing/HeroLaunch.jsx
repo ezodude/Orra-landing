@@ -69,7 +69,77 @@ export function HeroLaunch() {
 						</div>
 					</div>
 				</div>
-				
+
+				{/* How We Work Section */}
+				<section className="py-16 px-8 bg-white">
+					<div className="max-w-7xl mx-auto">
+						<div className="text-center mb-12">
+							<h2 className="text-3xl font-extrabold mb-2 tracking-tighter text-gray-900">How We Partner With You</h2>
+							<p className="text-lg text-gray-700">From concept to production, we're with you every step of the way</p>
+						</div>
+
+						<div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+							{/* Column 1: Discover & Design */}
+							<div className="text-center">
+								<div className="mb-4 flex justify-center">
+									<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-purple-500">
+										<circle cx="12" cy="12" r="10"></circle>
+										<path d="M12 16v-4"></path>
+										<path d="M12 8h.01"></path>
+									</svg>
+								</div>
+								<h3 className="text-xl font-bold text-gray-900 mb-3">Discover & Design</h3>
+								<ul className="text-gray-700 space-y-2 text-sm">
+									<li>Understand your use case and requirements</li>
+									<li>Architecture planning and feasibility assessment</li>
+									<li>Technology stack recommendations</li>
+								</ul>
+							</div>
+
+							{/* Column 2: Build & Implement */}
+							<div className="text-center">
+								<div className="mb-4 flex justify-center">
+									<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-purple-500">
+										<path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+									</svg>
+								</div>
+								<h3 className="text-xl font-bold text-gray-900 mb-3">Build & Implement</h3>
+								<ul className="text-gray-700 space-y-2 text-sm">
+									<li>Custom multi-agent system development</li>
+									<li>Integration with your existing infrastructure</li>
+									<li>Orra-powered resilience layer</li>
+								</ul>
+							</div>
+
+							{/* Column 3: Deploy & Optimize */}
+							<div className="text-center">
+								<div className="mb-4 flex justify-center">
+									<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-purple-500">
+										<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"></path>
+									</svg>
+								</div>
+								<h3 className="text-xl font-bold text-gray-900 mb-3">Deploy & Optimize</h3>
+								<ul className="text-gray-700 space-y-2 text-sm">
+									<li>Production deployment support</li>
+									<li>Monitoring and reliability improvements</li>
+									<li>Ongoing architecture consultation</li>
+								</ul>
+							</div>
+						</div>
+
+						<div className="text-center mt-10">
+							<Link href="https://cal.com/orra-dev/agent-apps-to-prod">
+								<button
+									type="button"
+									className="inline-flex items-center gap-x-2 rounded-md bg-black px-12 py-4 text-sm font-semibold text-white shadow-sm hover:bg-gray-700"
+								>
+									Get Started
+								</button>
+							</Link>
+						</div>
+					</div>
+				</section>
+
 				{/* Get Started Section - below the fold */}
 				{/*<section className="bg-white rounded-2xl shadow-lg p-10 mt-10 max-w-3xl mx-auto">*/}
 				<section className="py-8 px-8">
