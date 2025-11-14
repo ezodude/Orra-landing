@@ -64,12 +64,20 @@ export function HeroLaunch() {
 								Most AI agent projects fail to reach production. We've built infrastructure for resilient agent workflows—and we'll work with your team to architect, implement, and deploy systems that handle real-world complexity. From initial design to ongoing optimization, we ensure your agents work reliably at scale.
 							</p>
 							<div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center sm:items-start">
-								<Link href="https://github.com/orra-dev/orra">
+								<Link href="https://cal.com/orra-dev/agent-apps-to-prod">
 									<button
 										type="button"
 										className="inline-flex items-center gap-x-2 rounded-md bg-black px-12 py-4 text-sm font-semibold text-white shadow-sm hover:bg-gray-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bg-white/10"
 									>
-										TRY ORRA NOW
+										Schedule Your Strategy Session
+									</button>
+								</Link>
+								<Link href="https://github.com/orra-dev/orra">
+									<button
+										type="button"
+										className="inline-flex items-center gap-x-2 rounded-md bg-white px-12 py-4 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-200 hover:bg-gray-50"
+									>
+										Explore Open Source Tools
 										<svg
 											xmlns="http://www.w3.org/2000/svg"
 											width="24"
@@ -88,27 +96,6 @@ export function HeroLaunch() {
 										</svg>
 									</button>
 								</Link>
-								<button
-									type="button"
-									onClick={() => setShowWaitlistForm(!showWaitlistForm)}
-									className="inline-flex items-center gap-x-2 rounded-md bg-white px-12 py-4 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-200 hover:bg-gray-50"
-								>
-									Join Cloud Waitlist
-									<svg
-										className={`h-5 w-5 transition-transform ${showWaitlistForm ? 'rotate-180' : ''}`}
-										viewBox="0 0 24 24"
-										fill="none"
-										xmlns="http://www.w3.org/2000/svg"
-									>
-										<path
-											d="M19 9l-7 7-7-7"
-											stroke="currentColor"
-											strokeWidth="2"
-											strokeLinecap="round"
-											strokeLinejoin="round"
-										/>
-									</svg>
-								</button>
 							</div>
 							{showWaitlistForm && (
 								<form onSubmit={handleSubmit} className="mt-4 flex gap-x-2 max-w-md mx-auto lg:mx-0">
