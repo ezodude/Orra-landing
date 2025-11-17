@@ -1,45 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import Link from "next/link";
-import Error from "@/components/alerts/error";
-import Info from "@/components/alerts/info";
 import HeroDiagram from "@/components/orra/landing/HeroDiagram";
 
 export function HeroLaunch() {
-	const [ showWaitlistForm, setShowWaitlistForm ] = useState(false);
-	const [ successMessage, setSuccessMessage ] = useState('');
-	const [ errorMessage, setErrorMessage ] = useState('');
-	
-	const handleSubmit = async (event) => {
-		event.preventDefault()
-		
-		const data = {
-			email: event.target.email.value.trim()
-		}
-		
-		// Send the data to the server in JSON format.
-		const JSONData = JSON.stringify(data)
-		
-		// API endpoint where we send form data.
-		const endpoint = '/api/orra/waitlist/registration'
-		
-		// Form the request for sending data to the server.
-		const options = {
-			// The method is POST because we are sending data.
-			method: 'POST',
-			// Tell the server we're sending JSON.
-			headers: {
-				'Content-Type': 'application/json',
-			},
-			// Body of the request is the JSON data we created above.
-			body: JSONData,
-		}
-		
-		const response = await fetch(endpoint, options)
-		if (response.status === 500) {
-			return setErrorMessage("Apologies we could not sign you up to the waitlist at this time, please try again later.");
-		}
-		return setSuccessMessage("Thanks for signing up! We'll get in touch very soon.")
-	}
 	
 	return (
 		<div>
@@ -55,23 +18,29 @@ export function HeroLaunch() {
                 </span>
 							</Link>
 							<h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight tracking-tighter">
-								Make Your AI Agents Unstoppable
+								Build Production-Ready AI Agents That Actually Work
 							</h1>
 							<p className="text-lg text-gray-800 mb-6">
-								Orra keeps your agent workflows moving forward-even when APIs or evaluations fail.
+								We help businesses design, build, and deploy resilient agentic applications—from architecture to production.
 							</p>
 							<p className="text-base text-gray-700 mb-8">
-								Built for non-deterministic, multi-agent workflows where failure is the norm, not the exception. Orra
-								recovers, adapts, and keeps your system progressing. No lost work. No brittle error handling. No dead
-								ends.
+								Most AI agent projects fail to reach production. We've built infrastructure for resilient agent workflows—and we'll work with your team to architect, implement, and deploy systems that handle real-world complexity. From initial design to ongoing optimization, we ensure your agents work reliably at scale.
 							</p>
 							<div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center sm:items-start">
-								<Link href="https://github.com/orra-dev/orra">
+								<Link href="https://cal.com/orra-dev/agent-apps-to-prod">
 									<button
 										type="button"
 										className="inline-flex items-center gap-x-2 rounded-md bg-black px-12 py-4 text-sm font-semibold text-white shadow-sm hover:bg-gray-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bg-white/10"
 									>
-										TRY ORRA NOW
+										Schedule Your Strategy Session
+									</button>
+								</Link>
+								<Link href="https://github.com/orra-dev/orra">
+									<button
+										type="button"
+										className="inline-flex items-center gap-x-2 rounded-md bg-white px-12 py-4 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-200 hover:bg-gray-50"
+									>
+										Explore Open Source Tools
 										<svg
 											xmlns="http://www.w3.org/2000/svg"
 											width="24"
@@ -90,55 +59,7 @@ export function HeroLaunch() {
 										</svg>
 									</button>
 								</Link>
-								<button
-									type="button"
-									onClick={() => setShowWaitlistForm(!showWaitlistForm)}
-									className="inline-flex items-center gap-x-2 rounded-md bg-white px-12 py-4 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-200 hover:bg-gray-50"
-								>
-									Join Cloud Waitlist
-									<svg
-										className={`h-5 w-5 transition-transform ${showWaitlistForm ? 'rotate-180' : ''}`}
-										viewBox="0 0 24 24"
-										fill="none"
-										xmlns="http://www.w3.org/2000/svg"
-									>
-										<path
-											d="M19 9l-7 7-7-7"
-											stroke="currentColor"
-											strokeWidth="2"
-											strokeLinecap="round"
-											strokeLinejoin="round"
-										/>
-									</svg>
-								</button>
 							</div>
-							{showWaitlistForm && (
-								<form onSubmit={handleSubmit} className="mt-4 flex gap-x-2 max-w-md mx-auto lg:mx-0">
-									<input
-										id="email"
-										name="email"
-										type="email"
-										required
-										className="flex-auto rounded-md border-0 bg-white px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-gray-200 focus:ring-2 focus:ring-black"
-										placeholder="Enter your email"
-									/>
-									<button
-										type="submit"
-										className="rounded-md bg-black px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-gray-800"
-									>
-										Join waitlist
-									</button>
-								</form>
-							)}
-							{showWaitlistForm && (successMessage || errorMessage) && (
-								<div className="mt-3 max-w-md mx-auto lg:mx-0">
-									<Error errorMessage={errorMessage}/>
-									<Info info={successMessage} callback={() => {
-										setSuccessMessage("");
-										setShowWaitlistForm(false);
-									}}/>
-								</div>
-							)}
 							{/* Optional: Social proof row here */}
 						</div>
 						
@@ -148,103 +69,321 @@ export function HeroLaunch() {
 						</div>
 					</div>
 				</div>
-				
-				{/* Get Started Section - below the fold */}
-				{/*<section className="bg-white rounded-2xl shadow-lg p-10 mt-10 max-w-3xl mx-auto">*/}
-				<section className="py-8 px-8">
-					<div className="container mx-auto px-4 text-center">
-						<div className="h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full mb-8"></div>
-					</div>
-					
-					{/* Section Header */}
-					<div className="text-center mb-8">
-						<h2 className="text-3xl font-extrabold mb-2 tracking-tighter text-gray-900">Get Started</h2>
-						<p className="text-lg tracking-tight text-gray-700">Come and talk to us about your use case</p>
-					</div>
-					
-					{/* Content Card */}
-					<div className="max-w-xl mx-auto border border-gray-600 rounded-lg shadow-md p-8">
-						{/* Card Header */}
-						<div className="text-center mb-6">
-							<h3 className="text-2xl font-bold text-gray-800 mb-2">Custom Agent Infrastructure 🌐</h3>
-							<p className="text-gray-600">
-								Work with the Orra team to design, implement, and deploy production-grade multi-agent systems tailored
-								to your specific requirements.
-							</p>
+
+				{/* How We Work Section */}
+				<section className="py-16 px-8 bg-white">
+					<div className="max-w-7xl mx-auto">
+						<div className="text-center mb-12">
+							<h2 className="text-3xl font-extrabold mb-2 tracking-tighter text-gray-900">How We Partner With You</h2>
+							<p className="text-lg text-gray-700">From concept to production, we're with you every step of the way</p>
 						</div>
-						
-						{/* Pricing */}
-						<p className="text-xl font-bold text-gray-900 mb-6">$1,000+ / month</p>
-						
-						{/* Features List */}
-						<ul className="space-y-4 text-gray-700 mb-6">
-							<li className="flex items-start">
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									width="24"
-									height="24"
-									viewBox="0 0 24 24"
-									fill="none"
-									stroke="currentColor"
-									strokeWidth="2"
-									strokeLinecap="round"
-									strokeLinejoin="round"
-									className="lucide lucide-check mr-2 h-5 w-5 text-purple-500 flex-shrink-0"
+
+						<div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+							{/* Column 1: Discover & Design */}
+							<div className="text-center">
+								<div className="mb-4 flex justify-center">
+									<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-purple-500">
+										<circle cx="12" cy="12" r="10"></circle>
+										<path d="M12 16v-4"></path>
+										<path d="M12 8h.01"></path>
+									</svg>
+								</div>
+								<h3 className="text-xl font-bold text-gray-900 mb-3">Discover & Design</h3>
+								<ul className="text-gray-700 space-y-2 text-sm">
+									<li>Understand your use case and requirements</li>
+									<li>Architecture planning and feasibility assessment</li>
+									<li>Technology stack recommendations</li>
+								</ul>
+							</div>
+
+							{/* Column 2: Build & Implement */}
+							<div className="text-center">
+								<div className="mb-4 flex justify-center">
+									<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-purple-500">
+										<path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+									</svg>
+								</div>
+								<h3 className="text-xl font-bold text-gray-900 mb-3">Build & Implement</h3>
+								<ul className="text-gray-700 space-y-2 text-sm">
+									<li>Custom multi-agent system development</li>
+									<li>Integration with your existing infrastructure</li>
+									<li>Orra-powered resilience layer</li>
+								</ul>
+							</div>
+
+							{/* Column 3: Deploy & Optimize */}
+							<div className="text-center">
+								<div className="mb-4 flex justify-center">
+									<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-purple-500">
+										<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"></path>
+									</svg>
+								</div>
+								<h3 className="text-xl font-bold text-gray-900 mb-3">Deploy & Optimize</h3>
+								<ul className="text-gray-700 space-y-2 text-sm">
+									<li>Production deployment support</li>
+									<li>Monitoring and reliability improvements</li>
+									<li>Ongoing architecture consultation</li>
+								</ul>
+							</div>
+						</div>
+
+						<div className="text-center mt-10">
+							<Link href="https://cal.com/orra-dev/agent-apps-to-prod">
+								<button
+									type="button"
+									className="inline-flex items-center gap-x-2 rounded-md bg-black px-12 py-4 text-sm font-semibold text-white shadow-sm hover:bg-gray-700"
 								>
-									<path d="M20 6 9 17l-5-5"></path>
-								</svg>
-								Reliable architecture for scalability.
-							</li>
-							<li className="flex items-start">
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									width="24"
-									height="24"
-									viewBox="0 0 24 24"
-									fill="none"
-									stroke="currentColor"
-									strokeWidth="2"
-									strokeLinecap="round"
-									strokeLinejoin="round"
-									className="lucide lucide-check mr-2 h-5 w-5 text-purple-500 flex-shrink-0"
-								>
-									<path d="M20 6 9 17l-5-5"></path>
-								</svg>
-								Custom deployment options.
-							</li>
-							<li className="flex items-start">
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									width="24"
-									height="24"
-									viewBox="0 0 24 24"
-									fill="none"
-									stroke="currentColor"
-									strokeWidth="2"
-									strokeLinecap="round"
-									strokeLinejoin="round"
-									className="lucide lucide-check mr-2 h-5 w-5 text-purple-500 flex-shrink-0"
-								>
-									<path d="M20 6 9 17l-5-5"></path>
-								</svg>
-								Priority roadmap acceleration.
-							</li>
-						</ul>
-						
-						{/* Call-to-action Button */}
-						<div className="text-center">
-							<Link
-								href="https://cal.com/orra-dev/agent-apps-to-prod"
-								className="bg-black
-            text-white py-3 px-6 rounded-lg inline-block transition-all duration-300 shadow-md
-            transform hover:scale-[1.05]"
-							>
-								Talk to us →
+									Get Started
+								</button>
 							</Link>
 						</div>
 					</div>
 				</section>
-				{/*</section>*/}
+
+				{/* Services Section */}
+				<section className="py-16 px-8 bg-rose-50">
+					<div className="max-w-7xl mx-auto">
+						<div className="container mx-auto px-4 text-center mb-4">
+							<div className="h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full mb-8"></div>
+						</div>
+
+						{/* Section Header */}
+						<div className="text-center mb-12">
+							<h2 className="text-3xl font-extrabold mb-2 tracking-tighter text-gray-900">Our Services</h2>
+							<p className="text-lg tracking-tight text-gray-700">Flexible engagement models to meet your needs</p>
+						</div>
+
+						{/* Service Cards Grid */}
+						<div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+							{/* Tier 1 Card - Strategy & Architecture Review */}
+							<div className="border border-gray-300 rounded-lg shadow-md p-8 bg-white">
+								<div className="text-center mb-6">
+									<h3 className="text-2xl font-bold text-gray-800 mb-2">Strategy & Architecture Review</h3>
+									<p className="text-gray-600">
+										Expert consultation to evaluate your AI agent concept and chart the path to production.
+									</p>
+								</div>
+
+								<p className="text-lg font-semibold text-gray-700 mb-6 text-center">Contact us for pricing</p>
+
+								<ul className="space-y-4 text-gray-700 mb-6">
+									<li className="flex items-start">
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											width="24"
+											height="24"
+											viewBox="0 0 24 24"
+											fill="none"
+											stroke="currentColor"
+											strokeWidth="2"
+											strokeLinecap="round"
+											strokeLinejoin="round"
+											className="lucide lucide-check mr-2 h-5 w-5 text-purple-500 flex-shrink-0"
+										>
+											<path d="M20 6 9 17l-5-5"></path>
+										</svg>
+										Feasibility assessment and use case validation
+									</li>
+									<li className="flex items-start">
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											width="24"
+											height="24"
+											viewBox="0 0 24 24"
+											fill="none"
+											stroke="currentColor"
+											strokeWidth="2"
+											strokeLinecap="round"
+											strokeLinejoin="round"
+											className="lucide lucide-check mr-2 h-5 w-5 text-purple-500 flex-shrink-0"
+										>
+											<path d="M20 6 9 17l-5-5"></path>
+										</svg>
+										Architecture design recommendations
+									</li>
+									<li className="flex items-start">
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											width="24"
+											height="24"
+											viewBox="0 0 24 24"
+											fill="none"
+											stroke="currentColor"
+											strokeWidth="2"
+											strokeLinecap="round"
+											strokeLinejoin="round"
+											className="lucide lucide-check mr-2 h-5 w-5 text-purple-500 flex-shrink-0"
+										>
+											<path d="M20 6 9 17l-5-5"></path>
+										</svg>
+										Technology stack guidance
+									</li>
+								</ul>
+
+								<div className="text-center">
+									<Link
+										href="https://cal.com/orra-dev/agent-apps-to-prod"
+										className="bg-black text-white py-3 px-6 rounded-lg inline-block transition-all duration-300 shadow-md transform hover:scale-[1.05]"
+									>
+										Schedule Your Consultation
+									</Link>
+								</div>
+							</div>
+
+							{/* Tier 2 Card - Implementation Partnership */}
+							<div className="border border-gray-600 rounded-lg shadow-md p-8 bg-white">
+								<div className="text-center mb-6">
+									<h3 className="text-2xl font-bold text-gray-800 mb-2">Implementation Partnership</h3>
+									<p className="text-gray-600">
+										Partner with us to build, deploy, and scale production-grade multi-agent systems tailored to your business needs.
+									</p>
+								</div>
+
+								<p className="text-lg font-semibold text-gray-700 mb-6 text-center">Contact us for pricing</p>
+
+								<ul className="space-y-4 text-gray-700 mb-6">
+									<li className="flex items-start">
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											width="24"
+											height="24"
+											viewBox="0 0 24 24"
+											fill="none"
+											stroke="currentColor"
+											strokeWidth="2"
+											strokeLinecap="round"
+											strokeLinejoin="round"
+											className="lucide lucide-check mr-2 h-5 w-5 text-purple-500 flex-shrink-0"
+										>
+											<path d="M20 6 9 17l-5-5"></path>
+										</svg>
+										Custom architecture design for your use case
+									</li>
+									<li className="flex items-start">
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											width="24"
+											height="24"
+											viewBox="0 0 24 24"
+											fill="none"
+											stroke="currentColor"
+											strokeWidth="2"
+											strokeLinecap="round"
+											strokeLinejoin="round"
+											className="lucide lucide-check mr-2 h-5 w-5 text-purple-500 flex-shrink-0"
+										>
+											<path d="M20 6 9 17l-5-5"></path>
+										</svg>
+										Full implementation and production deployment
+									</li>
+									<li className="flex items-start">
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											width="24"
+											height="24"
+											viewBox="0 0 24 24"
+											fill="none"
+											stroke="currentColor"
+											strokeWidth="2"
+											strokeLinecap="round"
+											strokeLinejoin="round"
+											className="lucide lucide-check mr-2 h-5 w-5 text-purple-500 flex-shrink-0"
+										>
+											<path d="M20 6 9 17l-5-5"></path>
+										</svg>
+										Ongoing optimization and support
+									</li>
+								</ul>
+
+								<div className="text-center">
+									<Link
+										href="https://cal.com/orra-dev/agent-apps-to-prod"
+										className="bg-black text-white py-3 px-6 rounded-lg inline-block transition-all duration-300 shadow-md transform hover:scale-[1.05]"
+									>
+										Schedule Your Consultation
+									</Link>
+								</div>
+							</div>
+
+							{/* Tier 3 Card - Managed Infrastructure */}
+							<div className="border border-gray-300 rounded-lg shadow-md p-8 bg-white">
+								<div className="text-center mb-6">
+									<h3 className="text-2xl font-bold text-gray-800 mb-2">Managed Infrastructure</h3>
+									<p className="text-gray-600">
+										Fully managed Orra-powered infrastructure with 24/7 support for mission-critical AI agent systems.
+									</p>
+								</div>
+
+								<p className="text-lg font-semibold text-gray-700 mb-6 text-center">Contact us for pricing</p>
+
+								<ul className="space-y-4 text-gray-700 mb-6">
+									<li className="flex items-start">
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											width="24"
+											height="24"
+											viewBox="0 0 24 24"
+											fill="none"
+											stroke="currentColor"
+											strokeWidth="2"
+											strokeLinecap="round"
+											strokeLinejoin="round"
+											className="lucide lucide-check mr-2 h-5 w-5 text-purple-500 flex-shrink-0"
+										>
+											<path d="M20 6 9 17l-5-5"></path>
+										</svg>
+										Dedicated Orra cloud hosting
+									</li>
+									<li className="flex items-start">
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											width="24"
+											height="24"
+											viewBox="0 0 24 24"
+											fill="none"
+											stroke="currentColor"
+											strokeWidth="2"
+											strokeLinecap="round"
+											strokeLinejoin="round"
+											className="lucide lucide-check mr-2 h-5 w-5 text-purple-500 flex-shrink-0"
+										>
+											<path d="M20 6 9 17l-5-5"></path>
+										</svg>
+										24/7 monitoring and support
+									</li>
+									<li className="flex items-start">
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											width="24"
+											height="24"
+											viewBox="0 0 24 24"
+											fill="none"
+											stroke="currentColor"
+											strokeWidth="2"
+											strokeLinecap="round"
+											strokeLinejoin="round"
+											className="lucide lucide-check mr-2 h-5 w-5 text-purple-500 flex-shrink-0"
+										>
+											<path d="M20 6 9 17l-5-5"></path>
+										</svg>
+										SLA guarantees and priority support
+									</li>
+								</ul>
+
+								<div className="text-center">
+									<Link
+										href="https://cal.com/orra-dev/agent-apps-to-prod"
+										className="bg-black text-white py-3 px-6 rounded-lg inline-block transition-all duration-300 shadow-md transform hover:scale-[1.05]"
+									>
+										Schedule Your Consultation
+									</Link>
+								</div>
+							</div>
+
+						</div>{/* End Service Cards Grid */}
+					</div>
+				</section>
 			</div>
 		</div>
 	)

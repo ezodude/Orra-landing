@@ -11,10 +11,10 @@ export default function Home() {
 					rel="icon"
 					href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🪡</text></svg>"
 				/>
-				<title>orra - resilience for ai agent workflows</title>
+				<title>Build Production-Ready AI Agents | Orra Consulting</title>
 				<meta
 					name="description"
-					content="Orra is infrastructure for resilient AI agent workflows."
+					content="Expert consulting for businesses building AI agent applications. We help you design, implement, and deploy resilient multi-agent systems that work in production."
 				/>
 			</Head>
 			<div className="flex flex-col min-h-screen">

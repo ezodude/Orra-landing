@@ -2,9 +2,9 @@ import React from "react";
 import Link from "next/link";
 import { Container } from "@/components/orra/landing/Container";
 
-const APP_HOST = process?.env?.NEXT_PUBLIC_APP_HOST;
-
 export function Header() {
+	const APP_HOST = process.env.NEXT_PUBLIC_APP_HOST || "/";
+
 	return (
 		<header className="py-7 bg-rose-50">
 			<Container>
@@ -44,13 +44,13 @@ export function Header() {
 							href="https://cal.com/orra-dev/agent-apps-to-prod"
 							className="mt-4 sm:mt-0 inline-block bg-black text-white text-sm font-semibold py-2 px-5 rounded-md hover:bg-gray-800 transition duration-300 ease-in-out text-center"
 						>
-							Book Your Demo
+							Schedule a Consultation
 						</Link>
 						<Link
 							href="https://blog.orra.dev"
 							className="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-gray-700 border border-gray-300 rounded-md hover:text-[rgb(var(--magenta))] hover:border-[rgb(var(--magenta))] transition-colors text-center"
 						>
-							Read our engineering blog
+							Learn About Our Approach
 						</Link>
 					</div>
 				</nav>
