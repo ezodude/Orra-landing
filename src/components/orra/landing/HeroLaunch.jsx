@@ -24,7 +24,7 @@ export function HeroLaunch() {
 								We help businesses design, build, and deploy resilient agentic applications—from architecture to production.
 							</p>
 							<p className="text-base text-gray-700 mb-8">
-								Most AI agent projects fail to reach production. We've built infrastructure for resilient agent workflows—and we'll work with your team to architect, implement, and deploy systems that handle real-world complexity. From initial design to ongoing optimization, we ensure your agents work reliably at scale.
+								Most AI agent projects fail to reach production. We&apos;ve built infrastructure for resilient agent workflows—and we&apos;ll work with your team to architect, implement, and deploy systems that handle real-world complexity. From initial design to ongoing optimization, we ensure your agents work reliably at scale.
 							</p>
 							<div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center sm:items-start">
 								<Link href="https://cal.com/orra-dev/agent-apps-to-prod">
@@ -75,7 +75,7 @@ export function HeroLaunch() {
 					<div className="max-w-7xl mx-auto">
 						<div className="text-center mb-12">
 							<h2 className="text-3xl font-extrabold mb-2 tracking-tighter text-gray-900">How We Partner With You</h2>
-							<p className="text-lg text-gray-700">From concept to production, we're with you every step of the way</p>
+							<p className="text-lg text-gray-700">From concept to production, we&apos;re with you every step of the way</p>
 						</div>
 
 						<div className="grid grid-cols-1 md:grid-cols-3 gap-8">
