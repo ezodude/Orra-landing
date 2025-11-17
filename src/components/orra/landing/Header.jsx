@@ -2,9 +2,9 @@ import React from "react";
 import Link from "next/link";
 import { Container } from "@/components/orra/landing/Container";
 
-const APP_HOST = process?.env?.NEXT_PUBLIC_APP_HOST;
-
 export function Header() {
+	const APP_HOST = process.env.NEXT_PUBLIC_APP_HOST || "/";
+
 	return (
 		<header className="py-7 bg-rose-50">
 			<Container>
