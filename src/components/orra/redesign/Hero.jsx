@@ -160,34 +160,58 @@ function SystemDiagram({ hoveredSection }) {
     <div className="relative w-full max-w-lg mx-auto py-8">
       {/* Animation Keyframes */}
       <style>{`
-        @keyframes flowDown {
+        @keyframes flowDown1 {
           0% {
             transform: translateY(-8px);
             opacity: 0;
           }
-          50% {
+          5% {
             opacity: 0.8;
+          }
+          25% {
+            transform: translateY(40px);
+            opacity: 0;
           }
           100% {
             transform: translateY(40px);
             opacity: 0;
           }
         }
-        .flow-dot {
-          animation: flowDown 2.5s ease-in-out infinite;
+        @keyframes flowDown2 {
+          0%, 25% {
+            transform: translateY(-8px);
+            opacity: 0;
+          }
+          30% {
+            opacity: 0.8;
+          }
+          50% {
+            transform: translateY(40px);
+            opacity: 0;
+          }
+          100% {
+            transform: translateY(40px);
+            opacity: 0;
+          }
+        }
+        .flow-dot-1 {
+          animation: flowDown1 8s ease-in-out infinite;
+        }
+        .flow-dot-2 {
+          animation: flowDown2 8s ease-in-out infinite;
         }
       `}</style>
 
       <div className="relative flex flex-col items-center space-y-4">
         {/* Human - Top (Person icon in badge) */}
         <div className="relative z-10 text-center">
-          <div className={`w-20 h-20 rounded-full border border-amber-400 flex items-center justify-center transition-colors duration-300 ${hoveredSection === 'human' ? 'bg-amber-50' : 'bg-transparent'}`}>
+          <div className={`w-20 h-20 rounded-full border-amber-400 flex items-center justify-center transition-all duration-300 ${hoveredSection === 'human' ? 'bg-amber-500 border-2' : 'bg-transparent border'}`}>
             <svg
               width="28"
               height="28"
               viewBox="0 0 24 24"
               fill="none"
-              className={`transition-colors duration-300 ${hoveredSection === 'human' ? 'text-amber-400' : 'text-amber-500'}`}
+              className={`transition-colors duration-300 ${hoveredSection === 'human' ? 'text-white' : 'text-amber-500'}`}
             >
               <circle cx="12" cy="7" r="3" fill="currentColor" />
               <path d="M12 12c-3.866 0-7 2.239-7 5v2h14v-2c0-2.761-3.134-5-7-5z" fill="currentColor" />
@@ -197,18 +221,18 @@ function SystemDiagram({ hoveredSection }) {
 
         {/* Connection Line with animated dot */}
         <div className="relative flex items-center justify-center h-6 w-px bg-slate-300">
-          <div className="absolute top-0 w-1.5 h-1.5 bg-black rounded-full flow-dot"></div>
+          <div className="absolute top-0 w-1.5 h-1.5 bg-black rounded-full flow-dot-1"></div>
         </div>
 
         {/* Control Layer - Center (Layers icon in badge) */}
         <div className="relative z-10 text-center">
-          <div className={`w-20 h-20 rounded-full border border-pink-500 flex items-center justify-center transition-colors duration-300 ${hoveredSection === 'control' ? 'bg-pink-50' : 'bg-transparent'}`}>
+          <div className={`w-20 h-20 rounded-full border-pink-500 flex items-center justify-center transition-all duration-300 ${hoveredSection === 'control' ? 'bg-pink-500 border-2' : 'bg-transparent border'}`}>
             <svg
               width="28"
               height="28"
               viewBox="0 0 24 24"
               fill="none"
-              className={`transition-colors duration-300 ${hoveredSection === 'control' ? 'text-pink-500' : 'text-pink-600'}`}
+              className={`transition-colors duration-300 ${hoveredSection === 'control' ? 'text-white' : 'text-pink-600'}`}
             >
               {/* Stacked layers icon */}
               <rect x="4" y="5" width="16" height="3" rx="1.5" fill="currentColor" />
@@ -220,18 +244,18 @@ function SystemDiagram({ hoveredSection }) {
 
         {/* Connection Line with animated dot */}
         <div className="relative flex items-center justify-center h-6 w-px bg-slate-300">
-          <div className="absolute top-0 w-1.5 h-1.5 bg-black rounded-full flow-dot" style={{ animationDelay: '0.8s' }}></div>
+          <div className="absolute top-0 w-1.5 h-1.5 bg-black rounded-full flow-dot-2"></div>
         </div>
 
         {/* AI Agent - Bottom (Sparkle icon in badge) */}
         <div className="relative z-10 text-center">
-          <div className={`w-20 h-20 rounded-full border border-blue-400 flex items-center justify-center transition-colors duration-300 ${hoveredSection === 'ai' ? 'bg-blue-50' : 'bg-transparent'}`}>
+          <div className={`w-20 h-20 rounded-full border-blue-400 flex items-center justify-center transition-all duration-300 ${hoveredSection === 'ai' ? 'bg-blue-500 border-2' : 'bg-transparent border'}`}>
             <svg
               width="28"
               height="28"
               viewBox="0 0 24 24"
               fill="none"
-              className={`transition-colors duration-300 ${hoveredSection === 'ai' ? 'text-blue-400' : 'text-blue-500'}`}
+              className={`transition-colors duration-300 ${hoveredSection === 'ai' ? 'text-white' : 'text-blue-500'}`}
             >
               <path d="M12 2L13.5 8.5L20 10L13.5 11.5L12 18L10.5 11.5L4 10L10.5 8.5L12 2Z" fill="currentColor" />
               <path d="M19 14L19.75 16.25L22 17L19.75 17.75L19 20L18.25 17.75L16 17L18.25 16.25L19 14Z" fill="currentColor" opacity="0.6" />
@@ -250,17 +274,18 @@ function SystemDiagram({ hoveredSection }) {
           {/* Animated dot traveling along the feedback path */}
           <circle r="1.5" fill="#000000">
             <animateMotion
-              dur="3s"
+              dur="8s"
               repeatCount="indefinite"
-              begin="1.5s"
+              keyPoints="0;0;1;1"
+              keyTimes="0;0.5;1;1"
               path="M 1 350 Q 110 200 1 30"
             />
             <animate
               attributeName="opacity"
-              values="0;1;1;0"
-              dur="3s"
+              values="0;0;0.8;0.8;0"
+              keyTimes="0;0.5;0.55;0.95;1"
+              dur="8s"
               repeatCount="indefinite"
-              begin="1.5s"
             />
           </circle>
         </svg>
