@@ -20,10 +20,10 @@ export function Solution() {
                 className="text-5xl lg:text-6xl font-bold text-black mb-6 leading-tight"
                 style={{ fontFamily: '"Space Grotesk", "Work Sans", system-ui, sans-serif' }}
               >
-                Production-Ready AI Agents in Weeks
+                Human-Guided AI for Production
               </h2>
               <p className="text-xl text-slate-700 leading-relaxed max-w-3xl mx-auto">
-                Custom human-guided infrastructure that deploys fast and scales with trust.
+                We help teams move beyond prototypes to AI agents that work in production—with humans in control.
               </p>
             </div>
 
@@ -39,7 +39,7 @@ export function Solution() {
                     className="text-2xl font-bold text-black"
                     style={{ fontFamily: '"Space Grotesk", "Work Sans", system-ui, sans-serif' }}
                   >
-                    Real-Time Human Control
+                    Humans in Control
                   </h3>
                 </div>
                 <p className="text-base text-slate-700 leading-relaxed pl-11">
@@ -57,7 +57,7 @@ export function Solution() {
                     className="text-2xl font-bold text-black"
                     style={{ fontFamily: '"Space Grotesk", "Work Sans", system-ui, sans-serif' }}
                   >
-                    Proactive Prevention
+                    Built for Production
                   </h3>
                 </div>
                 <p className="text-base text-slate-700 leading-relaxed pl-11">
@@ -75,7 +75,7 @@ export function Solution() {
                     className="text-2xl font-bold text-black"
                     style={{ fontFamily: '"Space Grotesk", "Work Sans", system-ui, sans-serif' }}
                   >
-                    Guardrails for Every Scenario
+                    Deploy with Confidence
                   </h3>
                 </div>
                 <p className="text-base text-slate-700 leading-relaxed pl-11">
@@ -93,7 +93,7 @@ export function Solution() {
                     className="text-2xl font-bold text-black"
                     style={{ fontFamily: '"Space Grotesk", "Work Sans", system-ui, sans-serif' }}
                   >
-                    Full Visibility & Easy Debugging
+                    Full Visibility
                   </h3>
                 </div>
                 <p className="text-base text-slate-700 leading-relaxed pl-11">
