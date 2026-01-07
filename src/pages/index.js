@@ -1,7 +1,10 @@
 import Head from 'next/head'
-import { Footer } from '@/components/orra/landing/Footer'
-import { Header } from '@/components/orra/landing/Header'
-import { HeroLaunch } from '@/components/orra/landing/HeroLaunch'
+import { Navigation } from '@/components/orra/redesign/Navigation'
+import { Hero } from '@/components/orra/redesign/Hero'
+import { Problem } from '@/components/orra/redesign/Problem'
+import { Solution } from '@/components/orra/redesign/Solution'
+import { Services } from '@/components/orra/redesign/Services'
+import { Footer } from '@/components/orra/redesign/Footer'
 
 export default function Home() {
 	return (
@@ -11,18 +14,21 @@ export default function Home() {
 					rel="icon"
 					href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🪡</text></svg>"
 				/>
-				<title>Build Production-Ready AI Agents | Orra Consulting</title>
+				<title>Build Human-Guided AI Agents That Scale With Trust | Orra</title>
 				<meta
 					name="description"
-					content="Expert consulting for businesses building AI agent applications. We help you design, implement, and deploy resilient multi-agent systems that work in production."
+					content="Deploy production-ready AI agents in weeks, not years. We help you build human-guided agent systems where you direct AI to accomplish your goals. From the team that built Orra."
 				/>
 			</Head>
 			<div className="flex flex-col min-h-screen">
-				<main className="bg-gray-900 flex-grow">
-					<Header/>
-					<HeroLaunch/>
-					<Footer/>
+				<Navigation />
+				<main className="flex-grow">
+					<Hero />
+					<Problem />
+					<Solution />
+					<Services />
 				</main>
+				<Footer />
 			</div>
 		</>
 	)
