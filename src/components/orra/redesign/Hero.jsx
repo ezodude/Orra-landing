@@ -42,21 +42,12 @@ export function Hero() {
             </div>
 
             {/* CTAs */}
-            <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
+            <div className="flex justify-center pt-4">
               <Button
                 variant="primary"
                 href="https://cal.com/orra-dev/agent-apps-to-prod"
               >
                 Build With Us
-              </Button>
-              <Button
-                variant="secondary"
-                onClick={() => {
-                  const element = document.getElementById('approach');
-                  element?.scrollIntoView({ behavior: 'smooth' });
-                }}
-              >
-                How We Work
               </Button>
             </div>
 
